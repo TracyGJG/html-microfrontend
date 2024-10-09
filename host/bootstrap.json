@@ -7,15 +7,15 @@
 	"remotes": [
 		{
 			"name": "Red",
-			"url": "http://127.0.0.1:5502/red/index.html"
+			"url": "http://127.0.0.1:8080/red/index.html"
 		},
 		{
 			"name": "Green",
-			"url": "http://127.0.0.1:5502/green/index.html"
+			"url": "http://127.0.0.1:8080/green/index.html"
 		},
 		{
 			"name": "Blue",
-			"url": "http://127.0.0.1:5502/blue/index.html"
+			"url": "http://127.0.0.1:8080/blue/index.html"
 		}
 	]
 }
