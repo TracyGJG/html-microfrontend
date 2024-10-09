@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="icon" href="./images/logo.png" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>HTML MF</title>
+		<link rel="stylesheet" href="./host/style.css" />
+	</head>
+
+	<body>
+		<header>
+			<img src="" alt="Application Logo" />
+			<span>
+				<h1>Application Suite Name</h1>
+				<h2>Application Menu</h2>
+			</span>
+		</header>
+		<main>
+			<iframe src="" title="remote"></iframe>
+			<section class="appMenu"></section>
+		</main>
+		<footer></footer>
+
+		<script type="module">
+			import setup from './host/host.js';
+			import { receiveFromRemote, sendToRemote } from './comms.js';
+
+			const appConfig = setup();
+
+			receiveFromRemote((topic, data) => {
+				if (topic === 'PM') {
+					document.querySelector('footer').innerHTML = data;
+					sendToRemote({ topic: 'USER', data: 'User Name' });
+				} else if (topic === 'Exit') {
+					document.querySelector('iframe').src = '';
+					document.querySelector('h2').textContent = 'Application Menu';
+
+					document.querySelector('footer').textContent =
+						appConfig.host.defaultPm;
+				} else {
+					console.log('HOST:', topic, data);
+				}
+			});
+		</script>
+	</body>
+</html>

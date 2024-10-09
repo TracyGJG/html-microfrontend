@@ -1,0 +1,21 @@
+{
+	"host": {
+		"applicationName": "HTML Microfrontend Sampler",
+		"logo": "./images/logo.png",
+		"defaultPm": "Default Marking"
+	},
+	"remotes": [
+		{
+			"name": "Red",
+			"url": "http://127.0.0.1:5502/red/index.html"
+		},
+		{
+			"name": "Green",
+			"url": "http://127.0.0.1:5502/green/index.html"
+		},
+		{
+			"name": "Blue",
+			"url": "http://127.0.0.1:5502/blue/index.html"
+		}
+	]
+}
