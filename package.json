@@ -2,14 +2,12 @@
 	"name": "html-microfrontend",
 	"version": "1.0.0",
 	"description": "A basic micro-frontend example using native HTML.",
-	"main": "comms.js",
+	"main": "server.js",
+	"type": "module",
 	"scripts": {
-		"start": "http-server ./remotes"
+		"start": "node server.js remotes"
 	},
 	"keywords": [],
 	"author": "",
-	"license": "ISC",
-	"devDependencies": {
-		"http-server": "^14.1.1"
-	}
+	"license": "ISC"
 }
